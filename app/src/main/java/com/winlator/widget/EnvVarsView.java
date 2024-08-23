@@ -27,13 +27,18 @@ import java.util.Arrays;
 
 public class EnvVarsView extends FrameLayout {
     public static final String[][] knownEnvVars = {
+        {"WINEESYNC", "CHECKBOX", "0", "1"},
+        {"LC_ALL", "SELECT", "zh_CN.utf8", "zh_TW.utf8", "en_US.utf8", "ja_JP.utf8", "sr_RS.utf8", "ru_RU.utf8"}
         {"ZINK_DESCRIPTORS", "SELECT", "auto", "lazy", "cached", "notemplates"},
         {"ZINK_DEBUG", "SELECT_MULTIPLE", "nir", "spirv", "tgsi", "validation", "sync", "compact", "noreorder"},
+        {"ZINK_CONTEXT_THREADED", "CHECKBOX","0", "1"}
         {"MESA_SHADER_CACHE_DISABLE", "CHECKBOX", "false", "true"},
         {"mesa_glthread", "CHECKBOX", "false", "true"},
-        {"WINEESYNC", "CHECKBOX", "0", "1"},
+        {"MESA_GL_VERSION_OVERRIDE", "SELECT", "4.6COMPAT", "3.3COMPAT", "4.0", "3.1", "2.1"}
+        {"ZINK_CONTEXT_MODE", "SELECT", "base", "auto", "threaded"}
+        {"VKD3D_FEATURE_LEVEL", "SELECT", "12_0", "12_1", "12_2"}
         {"TU_DEBUG", "SELECT_MULTIPLE", "startup", "nir", "nobin", "sysmem", "gmem", "forcebin", "layout", "noubwc", "nomultipos", "nolrz", "nolrzfc", "perf", "perfc", "flushall", "syncdraw", "push_consts_per_stage", "rast_order", "unaligned_store", "log_skip_gmem_ops", "dynamic", "bos", "3d_load", "fdm", "noconform", "rd"},
-        {"DXVK_HUD", "SELECT_MULTIPLE", "devinfo", "fps", "frametimes", "submissions", "drawcalls", "pipelines", "descriptors", "memory", "gpuload", "version", "api", "cs", "compiler", "samplers"},
+        {"DXVK_HUD", "SELECT_MULTIPLE", "devinfo", "fps", "frametimes", "submissions", "drawcalls", "pipelines", "descriptors", "memory", "gpuload", "version", "api", "cs", "compiler", "samplers", "scale=0.7"},
         {"MESA_EXTENSION_MAX_YEAR", "NUMBER"},
         {"PULSE_LATENCY_MSEC", "NUMBER"},
         {"MESA_VK_WSI_PRESENT_MODE", "SELECT", "immediate", "mailbox", "fifo", "relaxed"}
